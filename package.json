@@ -1,0 +1,36 @@
+{
+  "name": "8--full-e-commerce-project",
+  "version": "1.0.0",
+  "description": "Full E-Commerce Project RestAPIs",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": "18.19.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Abdallah Osama",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "google-auth-library": "^9.7.0",
+    "joi": "^17.12.1",
+    "jsonwebtoken": "^9.0.2",
+    "luxon": "^3.4.4",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^5.0.5",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^6.9.9",
+    "nodemon": "^3.1.0",
+    "pdfkit": "^0.14.0",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.5",
+    "stripe": "^14.22.0"
+  }
+}
