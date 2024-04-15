@@ -13,7 +13,7 @@ import { OAuth2Client } from "google-auth-library";
 // ===================== Sign UP =================
 
 const signUp = async (req, res, next) => {
-  const { userName, email, password, age, gender, phoneNumber, address } =
+  const { userName, email, password, age, gender, phoneNumber, address, role } =
     req.body;
 
   // Check if email is already exists
@@ -64,6 +64,7 @@ const signUp = async (req, res, next) => {
     gender,
     phoneNumber,
     address,
+    role,
   });
   await userInstance.save();
 
