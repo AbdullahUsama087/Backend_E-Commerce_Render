@@ -13,8 +13,7 @@ const validateObjectId = (value, helper) => {
 };
 
 const generalFields = {
-  email: Joi.string()
-    .email({ tlds: { allow: ["com", "net", "org"] } }),
+  email: Joi.string().email({ tlds: { allow: ["com", "net", "org"] } }),
   password: Joi.string()
     .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)
     .messages({
@@ -48,4 +47,14 @@ function validationCoreFunction(schema) {
   };
 }
 
-export { validationCoreFunction, generalFields };
+// Validation for GraphQL Schemas
+async function graphQLValidation(schema, args) {
+  const { error } = schema.validate(args, { abortEarly: false });
+  if (error) {
+    return new Error(error);
+  } else {
+    true;
+  }
+}
+
+export { validationCoreFunction, generalFields, graphQLValidation };
