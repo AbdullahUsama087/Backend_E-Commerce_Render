@@ -6,7 +6,7 @@ import { asyncHandler } from "../../Utils/errorHandling.js";
 import * as cartValidators from "./cart.validation.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import cartApisRoles from "./cart.endpoints.js";
 
 const router = Router();
