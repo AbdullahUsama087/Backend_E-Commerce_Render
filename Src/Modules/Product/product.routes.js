@@ -9,7 +9,7 @@ import { validationCoreFunction } from "../../Middlewares/validation.js";
 import multerCloud from "../../Services/multerCloud.js";
 import allowedExtensions from "../../Utils/allowedExtensions.js";
 
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import productApisRoles from "./product.endpoints.js";
 
 const router = Router();
