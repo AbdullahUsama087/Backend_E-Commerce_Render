@@ -7,7 +7,7 @@ import multerCloud from "../../Services/multerCloud.js";
 import allowedExtensions from "../../Utils/allowedExtensions.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 import { asyncHandler } from "../../Utils/errorHandling.js";
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import brandApisRoles from "./brand.endpoints.js";
 
 const router = Router();
