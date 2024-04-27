@@ -6,7 +6,7 @@ import { asyncHandler } from "../../Utils/errorHandling.js";
 import * as orderValidators from "./order.validation.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import orderApisRoles from "./order.endpoints.js";
 
 const router = Router();
