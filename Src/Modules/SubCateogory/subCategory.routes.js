@@ -7,7 +7,7 @@ import * as SubCategoryControllers from "./subCategory.controller.js";
 import * as SubCategoryValidators from "./subCategory.validation.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 import { asyncHandler } from "../../Utils/errorHandling.js";
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import subCategoryApisRoles from "./subCategory.endpoints.js";
 
 const router = Router({ mergeParams: true }); // To access subcategory routes from category routes
