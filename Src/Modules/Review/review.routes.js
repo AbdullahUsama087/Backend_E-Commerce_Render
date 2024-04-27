@@ -6,7 +6,7 @@ import { asyncHandler } from "../../Utils/errorHandling.js";
 import * as reviewValidators from "./review.validation.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 
 import reviewApisRoles from "./review.endpoints.js";
 
