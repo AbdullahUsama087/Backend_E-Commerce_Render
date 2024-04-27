@@ -15,6 +15,10 @@ import { intiateIO } from "./ioFunctions.js";
 
 import productModel from "../../DataBase/Models/product.model.js";
 
+
+import { createHandler } from "graphql-http/lib/use/express";
+import { categorySchema } from "../Modules/Category/GraphQL/graphQLCategorySchemas.js";
+
 function intiateApp(app, express) {
   const port = process.env.PORT;
 
@@ -32,6 +36,8 @@ function intiateApp(app, express) {
   app.use("/order", Routers.orderRouter);
   app.use("/review", Routers.reviewRouter);
   app.use("/auth", Routers.authRouter);
+
+  app.use('/graphQLCategory',createHandler({schema:categorySchema}))
 
   changeCouponStatus();
 
