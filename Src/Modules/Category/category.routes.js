@@ -8,7 +8,7 @@ import * as CategoryController from "./category.controller.js";
 import * as CategoryValidators from "./category.validation.js";
 import { validationCoreFunction } from "../../Middlewares/validation.js";
 import subCategoryRouter from "../SubCateogory/subCategory.routes.js";
-import isAuth from "../../Middlewares/authentication.js";
+import { isAuth } from "../../Middlewares/authentication.js";
 import categoryApisRoles from "./category.endpoints.js";
 
 const router = Router();
